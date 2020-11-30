@@ -1,0 +1,1 @@
+http://dandientu.com/vi-xu-ly-ho-89/ly-thuyet-ve-code-led-sao-bang-bang-asm-va-keilc-cho-8051/?fbclid=IwAR2YxyuSAqJ5QxnEmsPmVRUe162KKO2IeDaGCzwsVAbHzPNfMKetpZODtV4

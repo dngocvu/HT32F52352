@@ -1,0 +1,9 @@
+--cpu Cortex-M0+
+".\objects\main.o"
+"C:\Keil_v5\ARM\PACK\ARM\CMSIS\5.3.0\CMSIS\Lib\ARM\arm_cortexM0l_math.lib"
+".\objects\ht32_op.o"
+".\objects\startup_ht32f52342_52.o"
+".\objects\system_ht32f5xxxx_01.o"
+--ro-base 0x00000000 --entry 0x00000000 --rw-base 0x20000000 --entry Reset_Handler --first __Vectors --strict --summary_stderr --info summarysizes --map --xref --callgraph --symbols
+--info sizes --info totals --info unused --info veneers
+--list ".\Listings\GPIO.map" -o .\Objects\GPIO.axf

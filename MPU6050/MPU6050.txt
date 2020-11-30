@@ -1,0 +1,109 @@
+#include "ht32f5xxxx_01.h"              // Device header
+#include <math.h>
+#include <stdint.h>
+
+//
+
+
+
+// initialize clock
+void init_Clock(void)
+{
+	
+
+
+}
+// configuration
+void config(void)
+{
+	
+
+
+}
+
+// initialize I2C 
+void init_I2C(void)
+{
+	// set clock's speed
+	HT_I2C1 -> SLPGR = 54;
+	HT_I2C1 -> SHPGR = 54;
+	// choose 7 bit address
+	HT_I2C1 -> CR &= ~(1<<7);
+	// enable I2C
+	HT_I2C1 -> CR |= (1<<3);
+}
+
+// read Register
+int16_t readReg(int8_t address)
+{
+	// check busy bit
+	while((HT_I2C1 -> SR & (1<<19)));
+	// S bit and address + W
+	HT_I2C1 -> TAR &= ~ (1<<10); // write mode
+	HT_I2C1 -> TAR |= 0x68;
+	// wait until ADRS = 1
+	while(!(HT_I2C1 -> SR & (1<<2)));
+	// send register address
+	while(!(HT_I2C1 -> SR &(1<<17))); // wait TXDE = 1
+	HT_I2C1 -> DR |= address;
+	// S bit and address + R
+	HT_I2C1 -> TAR |= (1<<10);
+	HT_I2C1 -> TAR |= 0x68;
+	// wait until ADRS = 1
+	while(!(HT_I2C1 -> SR  & (1<<2)));
+	// check in receive mode
+	while(HT_I2C1 -> SR & (1<<21));
+	// set bit AA = 0
+	HT_I2C1 -> CR &= ~(1<<0);
+	// wait RXDNE = 1
+	while(!(HT_I2C1 -> SR & (1<<16)));
+	// read DR
+	int16_t value = HT_I2C1 -> DR;
+	// send stop bit
+	HT_I2C1 -> CR |= (1<<1);
+	return value;
+
+}
+
+// write Register
+void writeReg(uint8_t address, uint8_t data)
+{
+	// check busy bit
+	while((HT_I2C1 -> SR & (1<<19)));
+	// S bit and address + W
+	HT_I2C1 -> TAR &= ~ (1<<10); // write mode
+	HT_I2C1 -> TAR |= 0x68;
+	// wait until ADRS = 1
+	while(!(HT_I2C1 -> SR & (1<<2)));
+	// send register address
+	while(!(HT_I2C1 -> SR &(1<<17))); // wait TXDE = 1
+	HT_I2C1 -> DR |= address;
+	// send stop bit
+	HT_I2C1 -> CR |= (1<<1);
+
+}
+// initialize MPC
+void init_MPC(void)
+{
+	// register 25, 26, 27, 28, 56, 107
+	//register 25(address: 0x19) -> 0x07
+	writeReg(0x19, 0x07);
+}
+
+int main()
+{
+	//
+	init_Clock();
+	config();
+	init_I2C();
+	init_MPC();
+	while(1)
+	{
+		//
+		int16_t temp_low = readReg(0x42);
+		int16_t temp_high = readReg(0x41);
+		int16_t temp = (temp_high << 8) | temp_low;
+	}
+
+
+}

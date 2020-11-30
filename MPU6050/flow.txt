@@ -1,0 +1,97 @@
+// libraries
+#include "ht..."
+#include <math.h> // atan, sqrt...
+include <stdint.h> // int16_t, uint8_t
+
+//
+void init_I2C(void)
+{
+	//set toc do clock
+	HT_I2C1 -> I2CSLPGR = 54;
+	HT_I2C1 -> I2CSHPGR = 54;
+	// 7 bit address
+	HT_I2C1 -> CR &= ~(1<<7);
+	// enable I2C
+	HT_I2C1 -> CR |= (1<<3);
+}
+void MPC_init(void)
+{
+	// register 25,26,27,28,56,107
+	// register 25(address:0x19) -> 0x07
+	writeReg();
+}
+void writeReg(uint8_t address, unit8_t data)
+{
+	// check busy bit
+	while((HT_I2C1 -> SR & (1<<19));
+
+	// S bit and address + W
+	HT_I2C1 -> TAR &= ~ (1<<10); // write mode
+	HT_I2C1 -> TAR |= 0x68;
+	// wait until ADRS = 1
+	while(!(HT_I2C1 -> SR & (1<<2)));
+	// send register address
+	while(!(HT_I2C1 -> SR &(1<<17))); // wait TXDE = 1
+	HT_I2C1 -> DR |= address;
+	// send stop bit
+	HT_I2C1 -> CR |= (1<<1);
+	
+}
+int16_t readReg(int8_t data)
+{
+	// check busy bit
+	while((HT_I2C1 -> SR & (1<<19));
+
+	// S bit and address + W
+	HT_I2C1 -> TAR &= ~ (1<<10); // write mode
+	HT_I2C1 -> TAR |= 0x68;
+	// wait until ADRS = 1
+	while(!(HT_I2C1 -> SR & (1<<2)));
+	// send register address
+	while(!(HT_I2C1 -> SR &(1<<17))); // wait TXDE = 1
+	HT_I2C1 -> DR |= address;
+	// S bit and address + R
+	HT_I2C1 -> TAR |= (1<<10);
+	HT_I2C1 -> TAR |= 0x68;
+	// wait until ADRS = 1
+	while(!(HT_I2C1 -> SR  & (1<<2)));
+	// check in receive mode
+	while(HT_I2C1 -> SR & (1<<21));
+	// set bit AA = 0
+	HT_I2C1 -> CR &= ~(1<<0);
+	// wait RXDNE = 1
+	while(!(HT_I2C1 -> ST & (1<<16)));
+	// read DR
+	int16_t value = HT_I2C1 -> DR;
+	// send stop bit
+	HT_I2C1 -> CR |= (1<<1);
+	
+	return value; 
+	
+}	
+
+
+// main
+
+int main(void)
+{
+	// enable clock: GPIO, I2C , AFIO, BFTM	
+	
+	// Prescale: I2C, BFTM
+	
+	// Set GPIO, AFIO (I2C: AF7)
+
+	// config I2C
+	init_I2C();
+	// config MPC
+	
+	
+	while(1)
+	{
+		//
+		int16_t temp_low = readReg(0x42);
+		int16_t temp_high = readReg(0x41);
+		int16_t temp = (temp_high << 8) | templow
+	}
+
+}

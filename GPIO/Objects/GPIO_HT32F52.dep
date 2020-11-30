@@ -1,0 +1,21 @@
+Dependencies for Project 'GPIO', Target 'HT32F52': (DO NOT MODIFY !)
+F (.\main.c)(0x5ABA1CA2)(--c99 -c --cpu Cortex-M0+ -D__EVAL -g -O2 --apcs=interwork --split_sections-I.\RTE\_HT32F52-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\5.3.0\CMSIS\Include-IC:\Keil_v5\ARM\PACK\Holtek\HT32_DFP\1.0.10\ARM\INC\Holtek\HT32F5xxxx-IC:\Keil_v5\ARM\PACK\Holtek\HT32_DFP\1.0.10\ARM\INC\Holtek\HT32F520xx-D__UVISION_VERSION="523" -D_RTE_ -DUSE_HT32F52342_52 -DUSE_HT32F52342_52-o .\objects\main.o --omf_browse .\objects\main.crf --depend .\objects\main.d)
+I (ht32f5xxxx_01.h)(0x599F46E6)
+I (C:\Keil_v5\ARM\PACK\ARM\CMSIS\5.3.0\CMSIS\Include\core_cm0plus.h)(0x5A8E2DF2)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x57F614C8)
+I (C:\Keil_v5\ARM\PACK\ARM\CMSIS\5.3.0\CMSIS\Include\cmsis_version.h)(0x5A55A3F2)
+I (C:\Keil_v5\ARM\PACK\ARM\CMSIS\5.3.0\CMSIS\Include\cmsis_compiler.h)(0x5A8E2DF2)
+I (C:\Keil_v5\ARM\PACK\ARM\CMSIS\5.3.0\CMSIS\Include\cmsis_armcc.h)(0x5A8E2DF2)
+I (C:\Keil_v5\ARM\PACK\Holtek\HT32_DFP\1.0.10\ARM\INC\Holtek\HT32F5xxxx\system_ht32f5xxxx_01.h)(0x599DBC98)
+F (.\ht32f5xxxx_01.h)(0x599F46E6)()
+F (C:\Keil_v5\ARM\PACK\ARM\CMSIS\5.3.0\CMSIS\Lib\ARM\arm_cortexM0l_math.lib)(0x5A602738)()
+F (RTE\Device\HT32F52352\ht32_op.s)(0x5BB42F47)(--cpu Cortex-M0+ --pd "__EVAL SETA 1" -g --apcs=interwork -I.\RTE\_HT32F52-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\5.3.0\CMSIS\Include-IC:\Keil_v5\ARM\PACK\Holtek\HT32_DFP\1.0.10\ARM\INC\Holtek\HT32F5xxxx-IC:\Keil_v5\ARM\PACK\Holtek\HT32_DFP\1.0.10\ARM\INC\Holtek\HT32F520xx--pd "__UVISION_VERSION SETA 523" --pd "_RTE_ SETA 1" --pd "USE_HT32F52342_52 SETA 1"--list .\listings\ht32_op.lst --xref -o .\objects\ht32_op.o --depend .\objects\ht32_op.d)
+F (RTE\Device\HT32F52352\startup_ht32f52342_52.s)(0x5A4CC3B4)(--cpu Cortex-M0+ --pd "__EVAL SETA 1" -g --apcs=interwork -I.\RTE\_HT32F52-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\5.3.0\CMSIS\Include-IC:\Keil_v5\ARM\PACK\Holtek\HT32_DFP\1.0.10\ARM\INC\Holtek\HT32F5xxxx-IC:\Keil_v5\ARM\PACK\Holtek\HT32_DFP\1.0.10\ARM\INC\Holtek\HT32F520xx--pd "__UVISION_VERSION SETA 523" --pd "_RTE_ SETA 1" --pd "USE_HT32F52342_52 SETA 1"--list .\listings\startup_ht32f52342_52.lst --xref -o .\objects\startup_ht32f52342_52.o --depend .\objects\startup_ht32f52342_52.d)
+F (RTE\Device\HT32F52352\system_ht32f5xxxx_01.c)(0x5BB42A1C)(--c99 -c --cpu Cortex-M0+ -D__EVAL -g -O2 --apcs=interwork --split_sections-I.\RTE\_HT32F52-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\5.3.0\CMSIS\Include-IC:\Keil_v5\ARM\PACK\Holtek\HT32_DFP\1.0.10\ARM\INC\Holtek\HT32F5xxxx-IC:\Keil_v5\ARM\PACK\Holtek\HT32_DFP\1.0.10\ARM\INC\Holtek\HT32F520xx-D__UVISION_VERSION="523" -D_RTE_ -DUSE_HT32F52342_52 -DUSE_HT32F52342_52-o .\objects\system_ht32f5xxxx_01.o --omf_browse .\objects\system_ht32f5xxxx_01.crf --depend .\objects\system_ht32f5xxxx_01.d)
+I (C:\Keil_v5\ARM\PACK\Holtek\HT32_DFP\1.0.10\ARM\INC\Holtek\HT32F5xxxx\ht32f5xxxx_01.h)(0x599DBC8E)
+I (C:\Keil_v5\ARM\PACK\ARM\CMSIS\5.3.0\CMSIS\Include\core_cm0plus.h)(0x5A8E2DF2)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x57F614C8)
+I (C:\Keil_v5\ARM\PACK\ARM\CMSIS\5.3.0\CMSIS\Include\cmsis_version.h)(0x5A55A3F2)
+I (C:\Keil_v5\ARM\PACK\ARM\CMSIS\5.3.0\CMSIS\Include\cmsis_compiler.h)(0x5A8E2DF2)
+I (C:\Keil_v5\ARM\PACK\ARM\CMSIS\5.3.0\CMSIS\Include\cmsis_armcc.h)(0x5A8E2DF2)
+I (C:\Keil_v5\ARM\PACK\Holtek\HT32_DFP\1.0.10\ARM\INC\Holtek\HT32F5xxxx\system_ht32f5xxxx_01.h)(0x599DBC98)

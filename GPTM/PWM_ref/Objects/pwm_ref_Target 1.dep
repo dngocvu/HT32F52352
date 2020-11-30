@@ -1,0 +1,20 @@
+Dependencies for Project 'pwm_ref', Target 'Target 1': (DO NOT MODIFY !)
+F (.\main.c)(0x5DF3C820)(--c99 --gnu -c --cpu Cortex-M0+ -D__EVAL -g -O0 --apcs=interwork --split_sections-I.\RTE\_Target_1-I"C:\Users\ngoc vu\AppData\Local\Arm\Packs\ARM\CMSIS\5.5.1\CMSIS\Core\Include"-I"C:\Users\ngoc vu\AppData\Local\Arm\Packs\Holtek\HT32_DFP\1.0.22\ARM\INC\Holtek\HT32F5xxxx"-D__UVISION_VERSION="528" -D_RTE_ -DUSE_HT32F52342_52-o .\objects\main.o --omf_browse .\objects\main.crf --depend .\objects\main.d)
+I (C:\Users\ngoc vu\AppData\Local\Arm\Packs\Holtek\HT32_DFP\1.0.22\ARM\INC\Holtek\HT32F5xxxx\ht32f5xxxx_01.h)(0x5DDFE5FC)
+I (C:\Users\ngoc vu\AppData\Local\Arm\Packs\Holtek\HT32_DFP\1.0.22\ARM\INC\Holtek\HT32F5xxxx\ht32_config.h)(0x5DDFE618)
+I (C:\Users\ngoc vu\AppData\Local\Arm\Packs\ARM\CMSIS\5.5.1\CMSIS\Core\Include\core_cm0plus.h)(0x5C8B6E06)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x5CEB87F2)
+I (C:\Users\ngoc vu\AppData\Local\Arm\Packs\ARM\CMSIS\5.5.1\CMSIS\Core\Include\cmsis_version.h)(0x5B972254)
+I (C:\Users\ngoc vu\AppData\Local\Arm\Packs\ARM\CMSIS\5.5.1\CMSIS\Core\Include\cmsis_compiler.h)(0x5C8F5BE4)
+I (C:\Users\ngoc vu\AppData\Local\Arm\Packs\ARM\CMSIS\5.5.1\CMSIS\Core\Include\cmsis_armcc.h)(0x5C8F5BE4)
+I (C:\Users\ngoc vu\AppData\Local\Arm\Packs\Holtek\HT32_DFP\1.0.22\ARM\INC\Holtek\HT32F5xxxx\system_ht32f5xxxx_01.h)(0x5A3A8CD0)
+F (RTE\Device\HT32F52352\startup_ht32f52342_52.s)(0x5DAAC6E0)(--cpu Cortex-M0+ --pd "__EVAL SETA 1" -g --apcs=interwork -I.\RTE\_Target_1-I"C:\Users\ngoc vu\AppData\Local\Arm\Packs\ARM\CMSIS\5.5.1\CMSIS\Core\Include"-I"C:\Users\ngoc vu\AppData\Local\Arm\Packs\Holtek\HT32_DFP\1.0.22\ARM\INC\Holtek\HT32F5xxxx"--pd "__UVISION_VERSION SETA 528" --pd "_RTE_ SETA 1" --pd "USE_HT32F52342_52 SETA 1"--list .\listings\startup_ht32f52342_52.lst --xref -o .\objects\startup_ht32f52342_52.o --depend .\objects\startup_ht32f52342_52.d)
+F (RTE\Device\HT32F52352\system_ht32f5xxxx_01.c)(0x5DDFE70A)(--c99 --gnu -c --cpu Cortex-M0+ -D__EVAL -g -O0 --apcs=interwork --split_sections-I.\RTE\_Target_1-I"C:\Users\ngoc vu\AppData\Local\Arm\Packs\ARM\CMSIS\5.5.1\CMSIS\Core\Include"-I"C:\Users\ngoc vu\AppData\Local\Arm\Packs\Holtek\HT32_DFP\1.0.22\ARM\INC\Holtek\HT32F5xxxx"-D__UVISION_VERSION="528" -D_RTE_ -DUSE_HT32F52342_52-o .\objects\system_ht32f5xxxx_01.o --omf_browse .\objects\system_ht32f5xxxx_01.crf --depend .\objects\system_ht32f5xxxx_01.d)
+I (C:\Users\ngoc vu\AppData\Local\Arm\Packs\Holtek\HT32_DFP\1.0.22\ARM\INC\Holtek\HT32F5xxxx\ht32f5xxxx_01.h)(0x5DDFE5FC)
+I (C:\Users\ngoc vu\AppData\Local\Arm\Packs\Holtek\HT32_DFP\1.0.22\ARM\INC\Holtek\HT32F5xxxx\ht32_config.h)(0x5DDFE618)
+I (C:\Users\ngoc vu\AppData\Local\Arm\Packs\ARM\CMSIS\5.5.1\CMSIS\Core\Include\core_cm0plus.h)(0x5C8B6E06)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x5CEB87F2)
+I (C:\Users\ngoc vu\AppData\Local\Arm\Packs\ARM\CMSIS\5.5.1\CMSIS\Core\Include\cmsis_version.h)(0x5B972254)
+I (C:\Users\ngoc vu\AppData\Local\Arm\Packs\ARM\CMSIS\5.5.1\CMSIS\Core\Include\cmsis_compiler.h)(0x5C8F5BE4)
+I (C:\Users\ngoc vu\AppData\Local\Arm\Packs\ARM\CMSIS\5.5.1\CMSIS\Core\Include\cmsis_armcc.h)(0x5C8F5BE4)
+I (C:\Users\ngoc vu\AppData\Local\Arm\Packs\Holtek\HT32_DFP\1.0.22\ARM\INC\Holtek\HT32F5xxxx\system_ht32f5xxxx_01.h)(0x5A3A8CD0)
